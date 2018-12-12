@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Calculadora JS</title>
+        <link rel="stylesheet" href="CSS/estilo.css" type="text/css">
+    </head>
+    <body>
+        <!-- Inicio barra lateral-->
+        <div id="sidebar">
+            <div class="toggle-btn">
+                <span>&#9776</span>
+            </div>
+            <ul>
+                <li><img src="img/spyboy.png" alt="mi logotipo" width="100" height="100" class="logo"></li>
+                <li>Home</li>
+                <li>Cambia</li>
+                <li>Otros</li>
+            </ul>
+        </div>
+        <!-- fin barra lateral -->
+        
+       
+        <div>
+            <button id="switch" type="button" value="pro" onclick="toggle()">SWITCH</button>
+        </div>
+        <div class="container">
+            <input type="text" id="inputBox" value=""><br>
+            <table id="pro">
+                <tr>
+                    <td><button type="button" value="!" class="digit" onclick="edit(this)">x!</button></td>
+                    <td><button type="button" value="√" class="digit" onclick="edit(this)">√</button></td>
+                    <td><button type="button" value="%" class="digit" onclick="edit(this)">%</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" value="" class="digit" onclick="edit(this)">sin</button></td>
+                    <td><button type="button" value="" class="digit" onclick="edit(this)">cos</button></td>
+                    <td><button type="button" value="" class="digit" onclick="edit(this)">tan</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" value="" class="digit" onclick="edit(this)">π</button></td>
+                    <td><button type="button" value="" class="digit" onclick="edit(this)">|x|</button></td>
+                    <td><button type="button" value="" class="digit" onclick="edit(this)">e</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" value="" class="digit" onclick="edit(this)">log</button></td>
+                    <td><button type="button" value="" class="digit" onclick="edit(this)">ln</button></td>
+                    <td><button type="button" value="" class="digit" onclick="edit(this)">1/x</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" value="" class="digit" onclick="edit(this)">±</button></td>
+                    <td><button type="button" value="" class="digit" onclick="edit(this)">x<sup>2</sup></button></td>
+                    <td><button type="button" value="" class="digit" onclick="edit(this)">y<sup>x</sup></button></td>
+                </tr>
+            </table>
+
+            <table id="std">
+                <tr>
+                    <td><button type="button" value="CE" class="digit" onclick="clc(this)">CE</button></td>
+                    <td><button type="button" value="C" class="digit" onclick="canc(this)">C</button></td>
+                    <td><button type="button" value="/" class="digit" onclick="edit(this)">/</button></td>
+                    <td><button type="button" value="*" class="digit" onclick="edit(this)">*</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" value="7" class="digit" onclick="edit(this)">7</button></td>
+                    <td><button type="button" value="8" class="digit" onclick="edit(this)">8</button></td>
+                    <td><button type="button" value="9" class="digit" onclick="edit(this)">9</button></td>
+                    <td><button type="button" value="-" class="digit" onclick="edit(this)">-</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" value="4" class="digit" onclick="edit(this)">4</button></td>
+                    <td><button type="button" value="5" class="digit" onclick="edit(this)">5</button></td>
+                    <td><button type="button" value="6" class="digit" onclick="edit(this)">6</button></td>
+                    <td><button type="button" value="+" class="digit" onclick="edit(this)">+</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" value="1" class="digit" onclick="edit(this)">1</button></td>
+                    <td><button type="button" value="2" class="digit" onclick="edit(this)">2</button></td>
+                    <td><button type="button" value="3" class="digit" onclick="edit(this)">3</button></td>
+                    <td rowspan="2"><button type="button" value="=" class="digit bigbuttonC" onclick="calc(this)" style="height: 120px;">=</button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button type="button" value="0" class="digit bigbuttonR" onclick="edit(this)" style="width: 100px;">0</button></td>
+                    <td><button type="button" value="." class="digit" onclick="edit(this)">.</button></td>
+                </tr>
+            </table>
+        </div>
+        <script src="JS/funciones.js"></script>
+        <script src="JS/calculos.js"></script>
+    </body>
+</html>
