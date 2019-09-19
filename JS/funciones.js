@@ -12,21 +12,27 @@ function canc(e){
 
 function edit(e){
     edittext.value += e.value;
-    console.log(e.value);
+    console.log(e.value); /* stampa su console */
 }
 
 function calc(e){
-    edittext.value = eval(edittext.value);
+    //edittext.value = eval(edittext.value);  /* vecchio funzione di calcolo, analizza il valore di una stringa */
+
+}
+
+//salvataggio dell'operatore
+function operator(e){
+    
 }
 
 function toggle(){
     if(editpro.style.display === "block"){
         editpro.style.display = "none";
-        ibox.style.width = "196px";
+        ibox.style.width = "240px";
     }
     else{
         editpro.style.display = "block";
-        ibox.style.width = "349px";
+        ibox.style.width = "420px";
     }
 }
 
