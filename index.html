@@ -4,22 +4,26 @@
 <head>
     <meta charset="utf-8">
     <title>Calculadora JS</title>
+    <link rel="stylesheet" href="CSS/buffer.css" type="text/css">
     <link rel="stylesheet" href="CSS/estilo.css" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <script src="https://kit.fontawesome.com/82900ec635.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <!-- start barra lateral-->
     <div id="sidebar">
         <div class="toggle-btn">
-            <span>&#9776</span>
+            <span>&#9776;</span>
+            <!-- <span>&#9748;</span> ombrellino-->
         </div>
         <ul>
             <li><img src="img/spyboy.png" alt="mi logotipo" width="100" height="100" class="logo"></li>
-            <li>Home</li>
-            <li>Cambia</li>
-            <li>Otros</li>
+            <li><a href="">Home</a></li>
+            <li><a href="">Cambia</a></li>
+            <li><a href="">Otros</a></li>
             <li>
-                <p><a href="#modal">Salida</a></p>
+                <a href="#modal">Salida</a>
             </li>
         </ul>
     </div>
@@ -28,14 +32,19 @@
     <!-- start modal salida -->
     <div id="modal" class="Modal">
         <aside class="Modal-box">
-            <h2>Modal de salida</h2>
-            <a href="#">cerrar</a>
+            <header class="Modal-box-header  pad-15">
+                <h2>Modal de salida</h2>
+                <a href="#"><i class="fas fa-times"></i></a>
+            </header>
+            <footer>
+
+            </footer>
         </aside>
     </div>
     <!-- end modal salida -->
 
     <div>
-        <button class="toggle-btn" type="button" value="pro" onclick="toggle()">SWITCH</button>
+        <button class="btn-pro" type="button" value="pro" onclick="toggle()">SWITCH</button>
     </div>
     <div class="container">
         <input type="number" id="inputBox" value="">

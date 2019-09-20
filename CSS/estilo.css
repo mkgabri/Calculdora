@@ -1,7 +1,10 @@
 :root {
     --fast-color: #2b88e4;
     --modal-color: rgba(73, 93, 100, 0.5);
-    --back-color: rgba(255,0,0,.6)
+    --modal-back-color: rgb(255, 255, 255);
+    --back-color: rgba(255,0,0,.6);
+    --back-color-dark: rgb(255, 61, 61);
+    --digit-color: rgb(255, 140, 0);
 }
 
 *{
@@ -15,7 +18,10 @@ html, body{
     background-repeat: no-repeat;
     background-position:  center top;
     background-size: cover;
+    font:16px "Open Sans", sans-serif; 
 }
+
+
 
 /* Sidebar-star */
 #sidebar{
@@ -23,7 +29,6 @@ html, body{
     height: 100%;
     width: 200px;
     left: -200px;
-    color: white;
     background-color: var(--fast-color);
     transition: all 300ms linear;
     z-index: 1000;
@@ -35,10 +40,24 @@ html, body{
 
 #sidebar ul li{
     text-align:center;
-    color: rbga(230,230,230, .9);
+    /* color: rbga(230,230,230, .9); */
+    /* border-bottom: 1px solid rgba(100,100,100,.3);  */
+}
+
+#sidebar ul li a {
+    text-decoration: none;
+    display: block;
     padding: 15px 10px;
-    list-style: none;
-    border-bottom: 1px solid rgba(100,100,100,.3);
+    color: white;
+}
+
+#sidebar ul li a:hover {
+    color: rgb(0, 0, 0);
+}
+
+#sidebar ul li:not(:first-child):hover {
+    background-color: var(--digit-color);
+    color: black;
 }
 
 #sidebar .toggle-btn{
@@ -60,7 +79,7 @@ html, body{
     background-color: lightgrey;
     border-radius: 50%;
     display: block;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 /* Sidebar-end */
 
@@ -87,17 +106,32 @@ html, body{
 .Modal-box {
     width: 50%;
     height: 50vh;
+    border-radius: 5px;
+    background-color: var(--modal-back-color);
+}
+
+.Modal-box-header {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    background-color: darkgoldenrod;
+    border-radius: 5px 5px 0 0;
+    box-sizing: border-box;
+    background-color: var(--back-color-dark);
+}
+
+.Modal-box-header > * {
+    display: inline-block;
+    color: white;
+}
+
+.Modal-box-header > a {
+    float: right;
 }
 
 /* end close modal */
 
 
-/* calcolatrice-start */
 
 table{
     border-spacing: 0;
@@ -120,7 +154,28 @@ table{
     max-width: 420px;
     transform: translateX(-50%)translateY(-50%);
     background-color: var(--fast-color);
+}
+
+.container:hover {
     box-shadow: 0 10px 20px #151719;
+}
+
+.btn-pro {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    height: 36px;
+    border-radius: 5px;
+    border: none;
+    padding: 0 16px;
+    transform: translateX(-50%)translateY(-50%);
+    background-color: var(--fast-color);
+    text-transform: uppercase;
+    color: white;
+}
+
+.btn-pro:hover {
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
 }
 
 #inputBox{
@@ -157,7 +212,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .digit:hover{
-    background-color: darkorange;
+    background-color: var(--digit-color);
 }
 
 
